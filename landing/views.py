@@ -1,11 +1,14 @@
 from django.db.models import QuerySet
 from django.http import HttpRequest
 from django.shortcuts import render
+from django.template.loader import render_to_string
 
 from .models import DictionaryTerm
 
 
 def main(request: HttpRequest):
+    # x = render_to_string('landing/main.html')
+    # print(type(x))
     return render(request, 'landing/main.html')
 
 
