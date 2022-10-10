@@ -1,6 +1,5 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django.utils import timezone
 
 
 class User(AbstractUser):
@@ -8,6 +7,7 @@ class User(AbstractUser):
 
 
 class DictionaryTerm(models.Model):
-    name = models.CharField(max_length=100, null=True)
+    name = models.CharField(max_length=100, null=True, unique=True)
+    slug = models.SlugField(max_length=100, null=True, unique=True)
     description = models.CharField(max_length=5000, default="Описание временно отсутствует")
 
