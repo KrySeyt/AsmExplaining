@@ -23,11 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DjangoSecretKey')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'asm-explaining.com',
-    'asm-explaining.herokuapp.com'
+    'asm-explaining.herokuapp.com',
+    '127.0.0.1',
 ]
 
 
