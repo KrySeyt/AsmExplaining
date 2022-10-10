@@ -26,7 +26,8 @@ SECRET_KEY = os.getenv('DjangoSecretKey')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'asm-explaining.com'
+    'asm-explaining.com',
+    'asm-explaining.herokuapp.com'
 ]
 
 
