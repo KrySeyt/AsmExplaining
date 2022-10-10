@@ -3,7 +3,7 @@
 {% block body %}
     <div class="container mt-3 w-50 p-3">
         {% for term in terms %}
-            <p><a href="{% url 'dictionary-term' term_slug=term.slug %}">{{ term.name }}</a></p>
+            <p><a href="{% url 'dictionary-term' term.slug %}">{{ term.name }}</a></p>
         {% endfor %}
     </div>
 {% endblock body %}

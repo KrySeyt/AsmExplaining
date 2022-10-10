@@ -1,0 +1,14 @@
+{% extends 'landing/base.html' %}
+
+{% load static %}
+
+{% block body %}
+    <div class="position-absolute start-50 translate-middle-x">
+        <h2>{{ term.name }} <img src="{% static 'landing/img/roflan-pominki.png' %}" alt="" width="45" height="45"></h2>
+    </div>
+    <div class="container mt-5">
+        {% for i in term.description.splitlines %}
+            <p>{{ i }}</p>
+        {% endfor %}
+    </div>
+{% endblock body %}
