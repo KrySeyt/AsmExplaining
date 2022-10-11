@@ -1,14 +1,14 @@
 from django.db.models import QuerySet
-from django.http import HttpRequest
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
+from django.template import Template, RequestContext
 from django.template.loader import render_to_string
+from django.utils.safestring import SafeString
 
 from .models import DictionaryTerm
 
 
 def main(request: HttpRequest):
-    # x = render_to_string('landing/main.html')
-    # print(type(x))
     return render(request, 'landing/main.html')
 
 
@@ -27,4 +27,8 @@ def dictionary_term(request: HttpRequest, term_slug: str):
     context: dict = {
         'term': term,
     }
-    return render(request, 'landing/term.html', context)
+    template_str: SafeString = render_to_string(request=request, template_name='landing/term.html', context=context)
+    context: RequestContext = RequestContext(request, context)
+    template: Template = Template(template_str)
+    return HttpResponse(template.render(context))
+

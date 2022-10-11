@@ -112,11 +112,11 @@
         <img src="{% static 'landing/img/dec.png' %}" alt="">
         <p>Примеры:</p>
         <p>&nbsp&nbsp&nbsp&nbsp<i>inc ax     ;AX = AX + 1</i></p>
-        <p>&nbsp&nbsp&nbsp&nbsp<i>dec ax ;AX = AX – 1</i></p>
+        <p style="padding-top: 0px">&nbsp&nbsp&nbsp&nbsp<i>dec ax ;AX = AX – 1</i></p>
 
         <p>Примеры использования:</p>
         <p>&nbsp&nbsp&nbsp&nbsp<i>inc bl ;bl = bl + 1</i></p>
-        <p>&nbsp&nbsp&nbsp&nbsp<i>dec ax ;ax = ax – 1</i></p>
+        <p style="padding-top: 0px">&nbsp&nbsp&nbsp&nbsp<i>dec ax ;ax = ax – 1</i></p>
         <p><strong>Команда умножения - MUL:</strong></p>
         <p>
             Есть две инструкции для умножения двоичных данных. Инструкция MUL (Multiply) обрабатывает беззнаковые
@@ -172,7 +172,6 @@
         <p>Примеры использования:</p>
         <p>&nbsp&nbsp&nbsp&nbsp <i>mul bl ;AX = AL * BL</i></p>
         <p>&nbsp&nbsp&nbsp&nbsp <i>mul ax ;DX:AX = AX * AX</i></p>
-        <p></p>
         <p><strong>Команда деления - DIV:</strong></p>
         <p>
             Операция деления генерирует два элемента — частное и остаток. В случае умножения переполнение не происходит,
