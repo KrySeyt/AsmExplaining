@@ -19,14 +19,12 @@
             По умолчанию размер сегментов составляет 16 бит
         </p>
         <h3>Содержание:<alt="" width="30" height="30"></h3>
-            <p>
-                1)Инструкция пересылки <a href="#mov">mov</a>
-                2)Инструкция сложения <a href="#add">add</a>
-                3)Инструкция вычитания <a href="#sub">sub</a>
-                4)Инкремент и декремент <a href="#incdec">inc/dec</a>
-            </p>
-            
-            
+            <li>&nbsp&nbspИнструкция пересылки <a href="#mov">mov</a></li>
+            <li>&nbsp&nbspИнструкция сложения <a href="#add">add</a></li>
+            <li>&nbsp&nbspИнструкция вычитания <a href="#sub">sub</a></li>
+            <li>&nbsp&nbspИнкремент и декремент <a href="#incdec">inc/dec</a></li>
+            <li>&nbsp&nbspИнструкция умножения <a href="#mul">mul</a></li>
+            <li>&nbsp&nbspИнструкция деления <a href="#div">div</a></li>
         <p>
             <strong><a name="mov">Команда пересылки - MOV:</a></strong>
         </p>
@@ -117,7 +115,9 @@
         <p>Примеры использования:</p>
         <p>&nbsp&nbsp&nbsp&nbsp<i>inc bl ;bl = bl + 1</i></p>
         <p style="padding-top: 0px">&nbsp&nbsp&nbsp&nbsp<i>dec ax ;ax = ax – 1</i></p>
-        <p><strong>Команда умножения - MUL:</strong></p>
+        <p>
+            <strong><a name="mul">Команда умножения - MUL:</a></strong>
+        </p>
         <p>
             Есть две инструкции для умножения двоичных данных. Инструкция MUL (Multiply) обрабатывает беззнаковые
             данные, а IMUL (Integer Multiply) обрабатывает данные со знаком. Обе инструкции влияют на флаг переноса и
@@ -157,22 +157,25 @@
                 <td>EDX:EAX</td>
             </tr>
         </table>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
         <p></p>
         <p>Примеры использования:</p>
         <p>&nbsp&nbsp&nbsp&nbsp <i>mul bl ;AX = AL * BL</i></p>
         <p>&nbsp&nbsp&nbsp&nbsp <i>mul ax ;DX:AX = AX * AX</i></p>
-        <p><strong>Команда деления - DIV:</strong></p>
+        <p></p>
+        <p>
+            <strong><a name="div">Команда деления - DIV:</a></strong>
+        </p>
         <p>
             Операция деления генерирует два элемента — частное и остаток. В случае умножения переполнение не происходит,
             потому что регистры двойной длины используются для хранения результата. Однако в случае деления может
@@ -223,21 +226,19 @@
                 <td>EDX</td>
             </tr>
         </table>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
         <p>Инструкция div выполняет остаток от деления:</p>
         <p>&nbspЕсли операнд является байтом, то в младший байт (AL) записывается AX / операнд</p>
         <p>&nbspЕсли операнд является словом, то в регистр (AX) записывается (DX AX) / операнд</p>
