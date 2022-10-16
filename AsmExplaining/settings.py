@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'landing',
+    'django_rename_app',
+    'AsmSite',
 ]
 
 MIDDLEWARE = [
@@ -102,7 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'landing.User'
+AUTH_USER_MODEL = 'AsmSite.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

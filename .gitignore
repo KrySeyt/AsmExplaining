@@ -62,7 +62,7 @@ db.sqlite3
 db.sqlite3-journal
 static/
 !AsmExplaining/static/
-!landing/static/
+!AsmSite/static/
 
 # Flask stuff:
 instance/
@@ -119,9 +119,6 @@ venv.bak/
 
 # Rope project settings
 .ropeproject
-
-# mkdocs documentation
-/site
 
 # mypy
 .mypy_cache/

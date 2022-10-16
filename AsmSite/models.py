@@ -3,4 +3,9 @@ from django.db import models
 
 
 class User(AbstractUser):
-    pass
+    class Meta:
+        app_label = 'AsmSite'
+
+
+# class Article(models.Model):
+#

@@ -1,10 +1,10 @@
-{% extends 'landing/base.html' %}
+{% extends 'AsmSite/base.html' %}
 
 {% load static %}
 
 {% block body %}
     <div class="position-absolute start-50 translate-middle-x">
-        <h2>Арифметические команды на ассемблере <img src="{% static 'landing/img/roflan-pominki.png' %}" alt=""
+        <h2>Арифметические команды на ассемблере <img src="{% static 'AsmSite/img/roflan-pominki.png' %}" alt=""
                                                       width="45" height="45"></h2>
     </div>
 
@@ -17,7 +17,7 @@
             программу).
         </p>
 
-        <img src="{% static 'landing/img/segments.png' %}" alt="">
+        <img src="{% static 'AsmSite/img/segments.png' %}" alt="">
 
         <p>
             По умолчанию размер сегментов составляет 16 бит
@@ -82,7 +82,7 @@
         <p>Складывание чисел происходит в двоичной системе счисления
             </br>
             Графическое представление работы команды сложения:</p>
-        <img src="{% static 'landing/img/add.png' %}" alt="">
+        <img src="{% static 'AsmSite/img/add.png' %}" alt="">
         <p>Стоит отметить, что в зависимости от результата выполнения, команда add может изменять состояние флагов.</p>
         <p>Подробнее о <a href="{% url 'flags' %}">флагах</a></p>
         </br>
@@ -103,7 +103,7 @@
         <p>Вычитание одного значения из другого происходит в двоичной системе счисления.
             </br>
             Графическое представление работы команды вычитания:</p>
-        <img src="{% static 'landing/img/sub.png' %}" alt="">
+        <img src="{% static 'AsmSite/img/sub.png' %}" alt="">
         <p>При выполнении вычитания необходимо обратить внимание на состояние регистра флагов процессора, так как
             существует шанс получить отрицательное число в качестве результата вычитания даже положительных чисел.
             Следовательно, надо отслеживать состояние флага SF (флаг знака) и, если он будет установлен, то принимать
@@ -122,9 +122,9 @@
         &nbsp&nbsp&nbsp&nbsp <i>dec операнд</i></p>
         <p>Логика работы команд:</p>
         <p>&nbsp&nbsp&nbsp&nbsp INC: < Операнд > = < Операнд > + 1</p>
-        <img src="{% static 'landing/img/inc.png' %}" alt="">
+        <img src="{% static 'AsmSite/img/inc.png' %}" alt="">
         <p>&nbsp&nbsp&nbsp&nbsp DEC: < Операнд > = < Операнд > - 1</p>
-        <img src="{% static 'landing/img/dec.png' %}" alt="">
+        <img src="{% static 'AsmSite/img/dec.png' %}" alt="">
         <p>Примеры использования:</p>
         <p>&nbsp&nbsp&nbsp&nbsp<i>inc bl ;bl = bl + 1</i>
             </br>
